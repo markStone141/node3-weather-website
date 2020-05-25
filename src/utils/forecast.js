@@ -13,7 +13,7 @@ const forecast = (lati, long, callback) => {
             let time = body.current.observation_time
             let temperature = body.current.temperature
             let city = body.location.name
-            callback(undefined, body.current.weather_descriptions + `. It's now ${temperature} degrees here in ${city}.  ${time}.` )
+            callback(undefined, body.current.weather_descriptions + `. It's now ${temperature}, and humidity is ${body.current.humidity} persent.  ${time}.` )
         }
     }) 
    

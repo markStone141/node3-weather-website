@@ -2,7 +2,8 @@
 
 const weatherForm = document.querySelector('form')
 const search = document.querySelector('input')
-let p = document.querySelector('#text')
+const p = document.querySelector('#text')
+const locTxt = document.querySelector("#location-text")
 
 weatherForm.addEventListener('submit', (e) => {
     e.preventDefault()
@@ -16,7 +17,8 @@ weatherForm.addEventListener('submit', (e) => {
             p.setAttribute('class', 'error');
             p.innerText = data.err;
         } else {
-            p.innerText = data.forecast
+            locTxt.textContent = location
+            p.textContent = data.forecast
         }
     })
 })
