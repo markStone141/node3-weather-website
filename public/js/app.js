@@ -14,6 +14,7 @@ weatherForm.addEventListener('submit', (e) => {
     res.json().then((data) => {
             p.classList.remove('error');
         if(data.err) {
+            locTxt.textContent = location
             p.setAttribute('class', 'error');
             p.innerText = data.err;
         } else {

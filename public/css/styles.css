@@ -73,3 +73,12 @@ header.container {
     color: red;
     font-size: 1rem;
 }
+
+button {
+    border: none;
+    background-color: #333333;
+    color: #dddddd;
+    padding: 5px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+}
